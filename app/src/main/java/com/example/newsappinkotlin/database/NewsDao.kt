@@ -9,6 +9,8 @@ interface NewsDao {
     @Insert(onConflict=OnConflictStrategy.REPLACE)
     fun insertNews(news:NewsModel)
 
+
+    
     // retrieves entity from database
     @Query("SELECT * FROM news_table")
     fun getAllSavedNews():List<NewsModel>
